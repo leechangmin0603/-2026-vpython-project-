@@ -1,5 +1,6 @@
-Web VPython 3.2
 box(texture = "https://png.pngtree.com/thumb_back/fh260/background/20230912/pngtree-blue-white-clouds-in-the-sky-hd-wallpapers-image_13271914.jpg",size=vec(10,6,0.3))
 ellipsoid(pos=vec(-5, 0, 0.7), length=1.5, height=1, width=1, color=color.yellow)
 cylinder(pos=vec(-5, 0, 0.7), axis=vec(1, 0, 0), color=color.yellow,size=vec(1,1,1))
 box(pos=vec(0, 0, 0.7), color = vec(128/255,128/255,128/255),size=vec(5,1.5,1.5))
+box(pos=vec(1.2, -2, 0.7),color = vec(128/255,128/255,128/255),size=vec(1.5,2.5,1.5))
+ring(pos=vec(0, 0, 0.7), color = vec(128/255,128/255,128/255),axis=vec(1, 1, 90), thickness = 0.2)
