@@ -1,0 +1,11 @@
+Web VPython 3.2
+box(pos=vec(0, 2, 0), size=vec(0.5, 4, 0.1), color=color.gray(0.8))
+pyramid(pos=vec(0, 0, 0), axis = vec(0,-1,0),size=vec(0.5,0.5,0.1),color=color.gray(0.8))
+arrow(pos=vec(0, 4, 0),size=vec(1.5,0,1),color=color.yellow)
+arrow(pos=vec(0, 4, 0),axis = vec(-1,0,0),size=vec(1.5,0,1),color=color.yellow)
+arrow(pos=vec(-1.05, 4, 0),axis = vec(1,0,0),size=vec(1.5,0,1),color=color.yellow)
+arrow(pos=vec(1.05, 4, 0),axis = vec(-1,0,0),size=vec(1.5,0,1),color=color.yellow)
+cylinder(pos=vec(0, 4.1, 0),axis = vec(0,5,0),size=vec(1.5,0.3,0.2),(color=color.yellow))
+sphere(pos=vec(0, 5.6, 0),size=vec(0.3,0.3,0.2),(color=color.yellow))
+mybox = box( texture=textures.stucco ,size=vec(2,3,3),pos=vec(1,0,0))
+mybox = box( texture=textures.stucco ,size=vec(2,3,3),pos=vec(-1,0,0))
