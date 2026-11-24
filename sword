@@ -1,11 +1,27 @@
 Web VPython 3.2
-box(pos=vec(0, 2, 0), size=vec(0.5, 4, 0.1), color=color.gray(0.8))
-pyramid(pos=vec(0, 0, 0), axis = vec(0,-1,0),size=vec(0.5,0.5,0.1),color=color.gray(0.8))
-arrow(pos=vec(0, 4, 0),size=vec(1.5,0,1),color=color.yellow)
-arrow(pos=vec(0, 4, 0),axis = vec(-1,0,0),size=vec(1.5,0,1),color=color.yellow)
-arrow(pos=vec(-1.05, 4, 0),axis = vec(1,0,0),size=vec(1.5,0,1),color=color.yellow)
-arrow(pos=vec(1.05, 4, 0),axis = vec(-1,0,0),size=vec(1.5,0,1),color=color.yellow)
-cylinder(pos=vec(0, 4.1, 0),axis = vec(0,5,0),size=vec(1.5,0.3,0.2),(color=color.yellow))
-sphere(pos=vec(0, 5.6, 0),size=vec(0.3,0.3,0.2),(color=color.yellow))
-mybox = box( texture=textures.stucco ,size=vec(2,3,3),pos=vec(1,0,0))
-mybox = box( texture=textures.stucco ,size=vec(2,3,3),pos=vec(-1,0,0))
+
+a=box(pos=vec(0, 2, 0), size=vec(0.5, 4, 0.1), color=color.gray(0.8))
+b=pyramid(pos=vec(0, 0, 0), axis = vec(0,-1,0),size=vec(0.5,0.5,0.1),color=color.gray(0.8))
+c=arrow(pos=vec(0, 4, 0),size=vec(1.5,0,1),color=color.yellow)
+d=arrow(pos=vec(0, 4, 0),axis = vec(-1,0,0),size=vec(1.5,0,1),color=color.yellow)
+e=arrow(pos=vec(-1.05, 4, 0),axis = vec(1,0,0),size=vec(1.5,0,1),color=color.yellow)
+f=arrow(pos=vec(1.05, 4, 0),axis = vec(-1,0,0),size=vec(1.5,0,1),color=color.yellow)
+g=cylinder(pos=vec(0, 4.1, 0),axis = vec(0,5,0),size=vec(1.5,0.3,0.2),(color=color.yellow))
+h=sphere(pos=vec(0, 5.6, 0),size=vec(0.3,0.3,0.2),(color=color.yellow))
+sword=compound([a,b,c,d,e,f,g,h])
+
+
+box( texture=textures.stucco ,size=vec(4,3,3),pos=vec(0,0,0))
+while True :
+    rate(100)
+    k = keysdown()
+
+    if ' ' in k :
+        sword.pos.y = sword.pos.y + 0.005
+        
+for i in range(0,100) :
+    rate(100)
+    sword(pos = vec(0,i,0))         
+    
+    
+    
