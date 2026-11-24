@@ -9,7 +9,10 @@ f=arrow(pos=vec(1.05, 4, 0),axis = vec(-1,0,0),size=vec(1.5,0,1),color=color.yel
 g=cylinder(pos=vec(0, 4.1, 0),axis = vec(0,5,0),size=vec(1.5,0.3,0.2),(color=color.yellow))
 h=sphere(pos=vec(0, 5.6, 0),size=vec(0.3,0.3,0.2),(color=color.yellow))
 sword=compound([a,b,c,d,e,f,g,h])
-
+x = distant_light(direction=vec(0, 10, 0), color = color.yellow)
+y = local_light(pos = sword.pos, color = color.yellow)
+x.visible = False
+y.visible = False
 
 box( texture=textures.stucco ,size=vec(4,3,3),pos=vec(0,0,0))
 while True :
@@ -19,9 +22,8 @@ while True :
     if ' ' in k :
         sword.pos.y = sword.pos.y + 0.005
         
-for i in range(0,100) :
-    rate(100)
-    sword(pos = vec(0,i,0))         
-    
-    
-    
+    if sword.pos.y >= 4.7 : 
+           
+        x.visible = True
+        y.visible = True
+        label(text = '검뽑기성공!!축하드립니다!')
